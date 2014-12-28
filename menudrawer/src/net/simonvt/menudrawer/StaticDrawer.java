@@ -152,6 +152,16 @@ public class StaticDrawer extends MenuDrawer {
     }
 
     @Override
+    public void setOffsetMenuRadio(float offsetMenuRadio) {
+        // NO-OP
+    }
+
+    @Override
+    public float getOffsetMenuRadio() {
+        return 0;
+    }
+
+    @Override
     public void peekDrawer() {
         // NO-OP
     }
