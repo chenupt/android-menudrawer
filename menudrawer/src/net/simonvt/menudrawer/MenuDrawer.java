@@ -1,7 +1,7 @@
 package net.simonvt.menudrawer;
 
 import net.simonvt.menudrawer.compat.ActionBarHelper;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -868,7 +868,8 @@ public abstract class MenuDrawer extends ViewGroup {
         return mPosition;
     }
 
-    @Override
+    @SuppressLint("NewApi")
+	@Override
     public void onRtlPropertiesChanged(int layoutDirection) {
         super.onRtlPropertiesChanged(layoutDirection);
 
@@ -1550,7 +1551,8 @@ public abstract class MenuDrawer extends ViewGroup {
      */
     public abstract int getTouchBezelSize();
 
-    @Override
+    @SuppressLint("NewApi")
+	@Override
     public void postOnAnimation(Runnable action) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             super.postOnAnimation(action);
@@ -1564,8 +1566,7 @@ public abstract class MenuDrawer extends ViewGroup {
         if (mDragMode == MENU_DRAG_WINDOW && mPosition != Position.BOTTOM) {
             mMenuContainer.setPadding(0, insets.top, 0, 0);
         }
-        return super.fitSystemWindows(insets);
-    }
+        return super.fitSystemWindows(insets);   }
 
     protected void dispatchOnDrawerSlide(float openRatio, int offsetPixels) {
         if (mOnDrawerStateChangeListener != null) {
