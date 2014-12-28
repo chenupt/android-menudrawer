@@ -191,7 +191,7 @@ public class SlidingDrawer extends DraggableDrawer {
         final int menuSize = mMenuSize;
         final int sign = (int) (mOffsetPixels / Math.abs(mOffsetPixels));
         final float openRatio = Math.abs(mOffsetPixels) / menuSize;
-        final int offset = (int) (-0.25f * ((1.0f - openRatio) * menuSize) * sign);
+        final int offset = (int) (-mOffsetMenuRadio * ((1.0f - openRatio) * menuSize) * sign);
 
         switch (getPosition()) {
             case LEFT: {

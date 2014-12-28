@@ -134,6 +134,11 @@ public abstract class DraggableDrawer extends MenuDrawer {
     protected boolean mOffsetMenu = true;
 
     /**
+     * Offset value whether the menu should be offset when dragging the drawer.
+     */
+    protected float mOffsetMenuRadio = 0.25f;
+
+    /**
      * Distance in px from closed position from where the drawer is considered closed with regards to touch events.
      */
     protected int mCloseEnough;
@@ -216,6 +221,14 @@ public abstract class DraggableDrawer extends MenuDrawer {
 
     public boolean getOffsetMenuEnabled() {
         return mOffsetMenu;
+    }
+
+    public void setOffsetMenuRadio(float value) {
+        this.mOffsetMenuRadio = value;
+    }
+
+    public float getOffsetMenuRadio() {
+        return mOffsetMenuRadio;
     }
 
     public void peekDrawer() {

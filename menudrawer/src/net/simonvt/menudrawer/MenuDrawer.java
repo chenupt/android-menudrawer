@@ -1144,6 +1144,20 @@ public abstract class MenuDrawer extends ViewGroup {
     public abstract boolean getOffsetMenuEnabled();
 
     /**
+     * Set the offset value when dragging the drawer.
+     *
+     * @param offset value in 0-1.0f. Default value is 0.25f.
+     */
+    public abstract void setOffsetMenuRadio(float offsetMenuRadio);
+
+    /**
+     * Get the offset menu value
+     *
+     * @return The offset value. Default value is 0.25f.
+     */
+    public abstract float getOffsetMenuRadio();
+
+    /**
      * Get the current state of the drawer.
      *
      * @return The state of the drawer.
