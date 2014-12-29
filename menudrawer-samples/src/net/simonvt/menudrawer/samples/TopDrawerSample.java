@@ -1,8 +1,5 @@
 package net.simonvt.menudrawer.samples;
 
-import net.simonvt.menudrawer.MenuDrawer;
-import net.simonvt.menudrawer.Position;
-
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,6 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+
+import net.simonvt.menudrawer.MenuDrawer;
+import net.simonvt.menudrawer.Position;
 
 /**
  * Sample class illustrating how to add a menu drawer above the content area.
@@ -32,6 +32,8 @@ public class TopDrawerSample extends Activity implements OnClickListener {
         mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_FULLSCREEN);
         mMenuDrawer.setContentView(R.layout.activity_topmenu);
         mMenuDrawer.setMenuView(R.layout.menu_top);
+        mMenuDrawer.setOffsetMenuRadio(1.0f);
+        mMenuDrawer.setClickToClose(false);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             getActionBar().setDisplayHomeAsUpEnabled(true);

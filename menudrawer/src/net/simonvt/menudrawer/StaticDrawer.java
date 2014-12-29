@@ -225,4 +225,12 @@ public class StaticDrawer extends MenuDrawer {
     public boolean isDrawerIndicatorEnabled() {
         return false;
     }
+
+    public boolean isClickToClose() {
+        return false;
+    }
+
+    public void setClickToClose(boolean clickToClose) {
+        // NO-OP
+    }
 }

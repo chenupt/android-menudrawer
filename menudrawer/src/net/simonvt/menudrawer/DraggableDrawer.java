@@ -156,6 +156,11 @@ public abstract class DraggableDrawer extends MenuDrawer {
     private Scroller mScroller;
 
     /**
+     * Indicates whether the menu should be close when content click.
+     */
+    private boolean clickToClose = true;
+
+    /**
      * Indicates whether the current layer type is {@link android.view.View#LAYER_TYPE_HARDWARE}.
      */
     protected boolean mLayerTypeHardware;
@@ -633,5 +638,15 @@ public abstract class DraggableDrawer extends MenuDrawer {
             setOffsetPixels(0);
         }
         mDrawerState = menuOpen ? STATE_OPEN : STATE_CLOSED;
+    }
+
+
+
+    public boolean isClickToClose() {
+        return clickToClose;
+    }
+
+    public void setClickToClose(boolean clickToClose) {
+        this.clickToClose = clickToClose;
     }
 }

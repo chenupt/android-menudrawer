@@ -1157,6 +1157,19 @@ public abstract class MenuDrawer extends ViewGroup {
      */
     public abstract float getOffsetMenuRadio();
 
+
+    /**
+     * Indicates whether the menu should be closed when the content is closed.
+     * @return
+     */
+    public abstract boolean isClickToClose();
+
+    /**
+     * Enables or disables close the menu when content is click.
+     * @param b
+     */
+    public abstract void setClickToClose(boolean b);
+
     /**
      * Get the current state of the drawer.
      *

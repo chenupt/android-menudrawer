@@ -407,7 +407,9 @@ public class SlidingDrawer extends DraggableDrawer {
 
                     // Close the menu when content is clicked while the menu is visible.
                 } else if (mMenuVisible && x > offsetPixels) {
-                    closeMenu();
+                    if(isClickToClose()){
+                        closeMenu();
+                    }
                 }
                 break;
             }
@@ -421,7 +423,9 @@ public class SlidingDrawer extends DraggableDrawer {
 
                     // Close the menu when content is clicked while the menu is visible.
                 } else if (mMenuVisible && y > offsetPixels) {
-                    closeMenu();
+                    if(isClickToClose()){
+                        closeMenu();
+                    }
                 }
                 break;
             }
@@ -437,7 +441,9 @@ public class SlidingDrawer extends DraggableDrawer {
 
                     // Close the menu when content is clicked while the menu is visible.
                 } else if (mMenuVisible && x < width + offsetPixels) {
-                    closeMenu();
+                    if(isClickToClose()){
+                        closeMenu();
+                    }
                 }
                 break;
             }
@@ -451,7 +457,9 @@ public class SlidingDrawer extends DraggableDrawer {
 
                     // Close the menu when content is clicked while the menu is visible.
                 } else if (mMenuVisible && y < getHeight() + offsetPixels) {
-                    closeMenu();
+                    if(isClickToClose()){
+                        closeMenu();
+                    }
                 }
                 break;
             }
